@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
+import { getAssetPath } from '@/lib/utils';
 import { 
   Github, 
   Linkedin, 
@@ -64,7 +65,9 @@ export default function Footer() {
               <Linkedin className="w-4 h-4" />
             </a>
             <a
-              href={PERSONAL_INFO.resumePath}
+              href={getAssetPath(PERSONAL_INFO.resumePath)}
+              target="_blank"
+              rel="noopener noreferrer"
               download="Sonu_Jangir_MERN_Developer_Resume.pdf"
               aria-label="Resume"
               className="p-2 rounded-xl bg-white hover:bg-sky-50 text-slate-600 hover:text-blue-600 border border-sky-200 transition-colors shadow-xs"

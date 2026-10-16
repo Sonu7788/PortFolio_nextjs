@@ -15,6 +15,7 @@ import {
   Layers
 } from 'lucide-react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
+import { getAssetPath } from '@/lib/utils';
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState<'profile' | 'server' | 'skills'>('profile');
@@ -92,7 +93,9 @@ export default function Hero() {
               </a>
 
               <a
-                href={PERSONAL_INFO.resumePath}
+                href={getAssetPath(PERSONAL_INFO.resumePath)}
+                target="_blank"
+                rel="noopener noreferrer"
                 download="Sonu_Jangir_MERN_Developer_Resume.pdf"
                 className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white hover:bg-sky-50 text-slate-700 hover:text-blue-600 font-semibold text-sm border border-sky-200 transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98]"
               >

@@ -10,6 +10,7 @@ import {
   ArrowUpRight 
 } from 'lucide-react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
+import { getAssetPath } from '@/lib/utils';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -101,7 +102,9 @@ export default function Navbar() {
 
             {/* Resume Button */}
             <a
-              href={PERSONAL_INFO.resumePath}
+              href={getAssetPath(PERSONAL_INFO.resumePath)}
+              target="_blank"
+              rel="noopener noreferrer"
               download="Sonu_Jangir_MERN_Developer_Resume.pdf"
               className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-xl bg-gradient-to-r from-blue-600 via-sky-500 to-blue-500 hover:from-blue-700 hover:to-sky-600 text-white shadow-md shadow-sky-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
@@ -158,7 +161,9 @@ export default function Navbar() {
                 </a>
               </div>
               <a
-                href={PERSONAL_INFO.resumePath}
+                href={getAssetPath(PERSONAL_INFO.resumePath)}
+                target="_blank"
+                rel="noopener noreferrer"
                 download="Sonu_Jangir_MERN_Developer_Resume.pdf"
                 className="w-full flex items-center justify-center gap-2 py-2.5 text-xs font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-md shadow-sky-500/20"
               >

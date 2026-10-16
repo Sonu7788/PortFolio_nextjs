@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
+import { getAssetPath } from '@/lib/utils';
 import { 
   Mail, 
   Phone, 
@@ -174,7 +175,9 @@ export default function Contact() {
               {/* Resume download quick card */}
               <div className="pt-2">
                 <a
-                  href={PERSONAL_INFO.resumePath}
+                  href={getAssetPath(PERSONAL_INFO.resumePath)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   download="Sonu_Jangir_MERN_Developer_Resume.pdf"
                   className="w-full flex items-center justify-center gap-2 p-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-700 hover:to-sky-600 text-white font-semibold text-xs shadow-md shadow-sky-500/20 transition-all hover:scale-[1.01]"
                 >
